@@ -54,9 +54,9 @@ form input {
   text-align: center;
 }
 
-form input:hover {
+/* form input:hover {
   box-shadow: 1px 3px 1px #a8aeb3;
-}
+} */
 
 button,
 input {
