@@ -41,7 +41,21 @@ searchSum.onsubmit = (e) => {
 // Find sum inside the array
 function sumArrayNumbers(numToFind, arr) {
   // first loop
-  for (let i = 0; i < arr.lenght; i++) {
-    console.log(arr[i]);
+  for (let i = 0; i < arr.length; i++) {
+    let num = arr[i];
+    //second loop
+    for (let b = 0; b < arr.length; b++) {
+      //Sum if the index is !== different
+      let res = arr[b] + (i !== b ? num : undefined);
+      // Check if match
+      if (res === numToFind) {
+        // Create a div
+        let div = document.createElement("div");
+        // Add Content
+        div.innerHTML = `${arr[b]} + ${num} = ${numToFind}`;
+        // Append show results
+        showArrNum.prepend(div);
+      }
+    }
   }
 }
