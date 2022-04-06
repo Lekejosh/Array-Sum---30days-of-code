@@ -1,17 +1,17 @@
 //Select element
-let formAdd = document.querySelector(".random-numbers");
+let formAdd = document.querySelector(".addNumbers");
 let searchSum = document.querySelector(".find-sum");
 let showArrNum = document.querySelector(".showArrNum");
 
 //Add Numbers event listener
 
 let arr = [];
-formAdd.onSubmit = (e) => {
+formAdd.onsubmit = (e) => {
   // Prevent default reload
   e.preventDefault();
   // Push Number inside the array
   arr.push(Number(formAdd.array.value));
-  console.log(formAdd.array.value);
+  // console.log(formAdd.array.value);
 
   //Reset form
   formAdd.reset();
@@ -30,10 +30,10 @@ searchSum.onsubmit = (e) => {
   e.preventDefault();
   // Add value
   numToFind = +searchSum.find.value;
-  console.log(numToFind);
+  // console.log(numToFind);
   //Reset form search
   searchSum.reset();
-  //
+  // Reset show area content
   showArrNum.innerHTML = "";
   //Run function
   sumArrayNumbers(numToFind, arr);
